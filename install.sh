@@ -84,8 +84,8 @@ echo "================ Adding azure-cli $AZURE_CLI_VERSION =============="
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | \
   sudo tee /etc/apt/sources.list.d/azure-cli.list
 sudo apt-key adv --keyserver packages.microsoft.com --recv-keys 417A0893
-sudo apt-get install -q apt-transport-https=1.2.25
-sudo apt-get update && sudo apt-get install -q -y azure-cli=$AZURE_CLI_VERSION
+sudo apt-get install -q apt-transport-https=1.0.1*
+sudo apt-get update && sudo apt-get install -y -q azure-cli=$AZURE_CLI_VERSION
 
 echo "================= Intalling Shippable CLIs ================="
 

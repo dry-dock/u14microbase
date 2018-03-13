@@ -47,7 +47,7 @@ echo "================= Installing Python packages ==================="
 apt-get install -q -y \
   python-pip=1.5.4* \
   python-software-properties=0.92.37.8 \
-  python-dev=2.7.9*
+  python-dev=2.7.5*
 
 # Update pip version
 python -m pip install -q -U pip

@@ -51,8 +51,10 @@ apt-get install -q -y \
   python-dev=2.7*
 
 # Update pip version
-python -m pip install -q -U pip
+#python -m pip install -q -U pip
+echo "================== Installing python requirements ====="
 pip install -q virtualenv==15.1.0
+pip install -r /u14/requirements.txt --ignore-installed colorama
 
 echo "================= Installing Git ==================="
 add-apt-repository ppa:git-core/ppa -y
@@ -105,10 +107,6 @@ echo "Installed Shippable CLIs successfully"
 echo "-------------------------------------"
 
 rm -rf /usr/local/lib/python2.7/dist-packages/requests*
-#pip install --upgrade pip
-
-echo "================== Installing python requirements ====="
-pip install -r /u14/requirements.txt
 
 echo "================= Cleaning package lists ==================="
 hash -r

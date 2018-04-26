@@ -105,7 +105,7 @@ echo "Installed Shippable CLIs successfully"
 echo "-------------------------------------"
 
 rm -rf /usr/local/lib/python2.7/dist-packages/requests*
-pip install --upgrade pip
+#pip install --upgrade pip
 
 echo "================== Installing python requirements ====="
 pip install -r /u14/requirements.txt

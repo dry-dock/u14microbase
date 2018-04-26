@@ -57,7 +57,7 @@ pip install -q virtualenv==15.1.0
 echo "================= Installing Git ==================="
 add-apt-repository ppa:git-core/ppa -y
 apt-get update
-apt-get install -q -y git=1:2.16.2*
+apt-get install -q -y git=1:2.17*
 
 echo "================= Adding JQ 1.5.1 ==================="
 apt-get install -q jq=1.3*

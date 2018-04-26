@@ -23,31 +23,32 @@ mkdir -p /etc/drydock
 
 echo "================= Installing basic packages ==================="
 apt-get install -y -q \
-  sudo=1.8.9p5-1ubuntu1  \
+  sudo=1.8*  \
   build-essential=11.6* \
   curl=7.35.0* \
   gcc=4:4.8.2* \
   make=3.81* \
-  openssl=1.0.1f* \
-  software-properties-common=0.92.37* \
+  openssl=1.0* \
+  software-properties-common=0.92* \
   wget=1.15* \
   nano=2.2.6* \
   unzip=6.0* \
-  openssh-client=1:6.6p1* \
+  zip=3.0*\
+  openssh-client=1:6* \
   libxslt1-dev=1.1.28* \
   libxml2-dev=2.9.1* \
-  htop=1.0.2* \
-  gettext=0.18.3.1* \
-  texinfo=5.2.0* \
-  rsync=3.1.0* \
+  htop=1.0* \
+  gettext=0.18* \
+  texinfo=5.2* \
+  rsync=3.1* \
   psmisc=22.20* \
-  vim=2:7.4.052*
+  vim=2:7.4*
 
 echo "================= Installing Python packages ==================="
 apt-get install -q -y \
   python-pip=1.5.4* \
-  python-software-properties=0.92.37.8 \
-  python-dev=2.7.5*
+  python-software-properties=0.92* \
+  python-dev=2.7*
 
 # Update pip version
 python -m pip install -q -U pip
@@ -63,6 +64,13 @@ apt-get install -q jq=1.3*
 
 echo "================= Adding awscli 1.11.164 ============"
 sudo pip install -q 'awscli==1.11.164'
+
+echo "================= Adding apache libcloud 2.3.0 ============"
+sudo pip install 'apache-libcloud==2.3.0'
+
+echo "================= Adding openstack client 3.15.0 ============"
+sudo pip install python-openstackclient==3.15.0 --ignore-installed urllib3
+sudo pip install shade==1.27.1
 
 echo "================= Installing Node 7.x ==================="
 . /u14/node/install.sh

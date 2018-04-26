@@ -70,10 +70,6 @@ sudo pip install -q 'awscli==1.11.164'
 echo "================= Adding apache libcloud 2.3.0 ============"
 sudo pip install 'apache-libcloud==2.3.0'
 
-echo "================= Adding openstack client 3.15.0 ============"
-sudo pip install python-openstackclient==3.15.0 --ignore-installed urllib3
-sudo pip install shade==1.27.1
-
 echo "================= Installing Node 7.x ==================="
 . /u14/node/install.sh
 

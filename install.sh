@@ -59,7 +59,7 @@ pip install -r /u14/requirements.txt --ignore-installed colorama
 echo "================= Installing Git ==================="
 add-apt-repository ppa:git-core/ppa -y
 apt-get update
-apt-get install -q -y git=1:2.17*
+apt-get install -q -y git=1:2.*
 
 echo "================= Adding JQ 1.5.1 ==================="
 apt-get install -q jq=1.3*
